@@ -2,7 +2,9 @@
 ##Introduction
 Contextual Transcriptional Activity Inference of Regulators (icTAIR) is an iterative algorithm that takes as its input previously-defined target genes of regulators and gene expression data from a dataset of samples for a given context. It then employs Binding Association with Sorted Expression (BASE) method to integrate these inputs and calculate individual Regulatory Activity Scores (iRASs) for each sample for that regulator. It then correlates each target gene’s expression with the regulator’s iRAS across the samples, drops the weakly and uncorrelated target genes to create an updated target gene list, and repeats the whole process. Once N iterations are used to generate a stable list of contextually-refined target genes, this list can be used for a final BASE-derived iRAS discernment for additional samples within that context, enabling further downstream analyses.
 ##Usage
+```{r}
 refined_gset <- icTAIR(geneExp, tarGene, iterativeMax, setMin, corCut, permTimes, channel)
+```
 ###icTAIR requires as input two data sources:
 (1) geneExp: a gene expression data from a dataset of samples for a given context.<br/>
 (2) tarGene: a previously-defined target genes of regulators.<br/>
@@ -18,6 +20,8 @@ refined_gset <- icTAIR(geneExp, tarGene, iterativeMax, setMin, corCut, permTimes
 (3) library("icTAIR_0.0.1.tar.gz").<br/>
 ##Example
 Here, we use the gene expression data of 50 TCGA breast cancer samples, and pre-defined target gene lits of 100 regulators from MsigBD c3 as examples.<br/>
+```{r}
 refined_gset <- iTARI(geneExp = tcga_example, tarGene = MSigDB_example, iterativeMax = 10, setMin = 20, corCut = 0.1, permTimes = 1000, channel = T)
+```
 ##Contact
 Please contact Yue Wang by yue.wang@dartmouth.edu and Chao Cheng by Chao.Cheng@dartmouth.edu if you have any questions.
