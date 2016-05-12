@@ -21,7 +21,7 @@ refined_gset <- icTAIR(geneExp, tarGene, iterativeMax, setMin, corCut, permTimes
 ##Example
 Here, we use the gene expression data of 50 TCGA breast cancer samples, and pre-defined target gene lits of 100 regulators from MsigBD c3 as examples.<br/>
 ```{r}
-refined_gset <- iTARI(geneExp = tcga_example, tarGene = MSigDB_example, iterativeMax = 10, setMin = 20, corCut = 0.1, permTimes = 1000, channel = T)
+refined_gset <- iTARI(geneExp = "tcga_example", tarGene = "MSigDB_example", iterativeMax = 10, setMin = 20, corCut = 0.1, permTimes = 1000, channel = T)
 ```
 ##Contact
 Please contact Yue Wang by yue.wang@dartmouth.edu and Chao Cheng by Chao.Cheng@dartmouth.edu if you have any questions.
