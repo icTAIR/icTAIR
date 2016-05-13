@@ -14,18 +14,18 @@ refined_gset <- icTAIR(geneExp, tarGene, iterativeMax, setMin, corCut, permTimes
 (3) corCut: the minimum correlation threshold, either as a value (0-1), default set to 0.1.<br/>
 (4) permTimes: the number of permutation times in BASE, default set to 1000.<br/>
 (5) channel: the Microarray channel of dataset of gene expression profiles of samples, True means one channel and FALSE means two channel, default set to T.<br/>
-##Install
+##Installation
 (1) download the icTAIR_0.0.1.tar.gz file.<br/>
 (2) install the package using ```install.packages("file_path/icTAIR_0.0.1.tar.gz")```.<br/>
 (3) ```library("icTAIR")```.<br/>
 ##Example
 Here, we use the gene expression data of 50 TCGA breast cancer samples, and pre-defined target gene lits of 100 regulators from MsigBD c3 as examples.<br/>
-To see the example data:
+####Data:
 ```{r}
 data(TCGA) #tcga_example
 data(MsigDB) #MsigDB_example
 ```
-Example:
+####Example:
 ```{r}
 refined_gset <- icTAIR(geneExp = "tcga_example", tarGene = "MSigDB_example", iterativeMax = 5, setMin = 20, corCut = 0.1, permTimes = 100, channel = T)
 ```
