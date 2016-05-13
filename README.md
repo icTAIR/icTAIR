@@ -22,8 +22,8 @@ refined_gset <- icTAIR(geneExp, tarGene, iterativeMax, setMin, corCut, permTimes
 Here, we use the gene expression data of 50 TCGA breast cancer samples, and pre-defined target gene lits of 100 regulators from MsigBD c3 as examples.<br/>
 To see the example data:
 ```{r}
-data(TCGA)
-data(MSigDB)
+data(TCGA) #tcga_example
+data(MsigDB) #MsigDB_example
 ```
 Example:
 ```{r}
