@@ -16,8 +16,8 @@ refined_gset <- icTAIR(geneExp, tarGene, iterativeMax, setMin, corCut, permTimes
 (5) channel: the Microarray channel of dataset of gene expression profiles of samples, True means one channel and FALSE means two channel, default set to T.<br/>
 ##Install
 (1) download the icTAIR_0.0.1.tar.gz file.<br/>
-(2) install the package using ```{r}install.packages("file_path/icTAIR_0.0.1.tar.gz")```.<br/>
-(3) ```{r}library("icTAIR")```.<br/>
+(2) install the package using ```install.packages("file_path/icTAIR_0.0.1.tar.gz")```.<br/>
+(3) ```library("icTAIR")```.<br/>
 ##Example
 Here, we use the gene expression data of 50 TCGA breast cancer samples, and pre-defined target gene lits of 100 regulators from MsigBD c3 as examples.<br/>
 To see the example data:
