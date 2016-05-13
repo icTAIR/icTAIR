@@ -1,6 +1,6 @@
 # icTAIR
 ##Introduction
-Contextual Transcriptional Activity Inference of Regulators (icTAIR) is an iterative algorithm that takes as its input previously-defined target genes of regulators and gene expression data from a dataset of samples for a given context. It then employs Binding Association with Sorted Expression (BASE) method to integrate these inputs and calculate individual Regulatory Activity Scores (iRASs) for each sample for that regulator. It then correlates each target gene’s expression with the regulator’s iRAS across the samples, drops the weakly and uncorrelated target genes to create an updated target gene list, and repeats the whole process. Once N iterations are used to generate a stable list of contextually-refined target genes.
+Contextual Transcriptional Activity Inference of Regulators (icTAIR) is an iterative algorithm that takes as its input previously-defined target genes of regulators and gene expression data from a dataset of samples for a given context. It then employs Binding Association with Sorted Expression (BASE) method to integrate these inputs and calculate individual Regulatory Activity Scores (iRASs) for each sample for that regulator. It then correlates each target gene’s expression with the regulator’s iRAS across the samples, drops the weakly and uncorrelated target genes to create an updated target gene list, and repeats the whole process. Once N iterations are used to generate a stable list of contextually-refined target genes. icTAIR is a R package.
 ##Usage
 ```{r}
 refined_gset <- icTAIR(geneExp, tarGene, iterativeMax, setMin, corCut, permTimes, channel)
@@ -16,7 +16,7 @@ refined_gset <- icTAIR(geneExp, tarGene, iterativeMax, setMin, corCut, permTimes
 (5) channel: the Microarray channel of dataset of gene expression profiles of samples, True means one channel and FALSE means two channel, default set to T.<br/>
 ##Installation
 (1) download the icTAIR_0.0.1.tar.gz file.<br/>
-(2) install the package using ```install.packages("file_path/icTAIR_0.0.1.tar.gz")```.<br/>
+(2) Open R and install the package using ```install.packages("file_path/icTAIR_0.0.1.tar.gz")```.<br/>
 (3) ```library("icTAIR")```.<br/>
 ##Example
 Here, we use the gene expression data of 50 TCGA breast cancer samples, and pre-defined target gene lits of 100 regulators from MsigBD c3 as examples.<br/>
