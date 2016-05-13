@@ -27,7 +27,7 @@ data(MsigDB) #MsigDB_example
 ```
 Example:
 ```{r}
-refined_gset <- icTAIR(geneExp = "tcga_example", tarGene = "MSigDB_example", iterativeMax = 10, setMin = 20, corCut = 0.1, permTimes = 1000, channel = T)
+refined_gset <- icTAIR(geneExp = "tcga_example", tarGene = "MSigDB_example", iterativeMax = 5, setMin = 20, corCut = 0.1, permTimes = 1000, channel = T)
 ```
 ##Contact
 Please contact Yue Wang by yue.wang@dartmouth.edu and Chao Cheng by Chao.Cheng@dartmouth.edu if you have any questions.
