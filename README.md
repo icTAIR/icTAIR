@@ -5,10 +5,10 @@ Contextual Transcriptional Activity Inference of Regulators (icTAIR) is an itera
 ```{r}
 refined_gset <- icTAIR(geneExp, tarGene, iterativeMax, setMin, corCut, permTimes, channel)
 ```
-###icTAIR requires as input two data sources:
+####icTAIR requires as input two data sources:
 (1) geneExp: a gene expression data from a dataset of samples for a given context.<br/>
 (2) tarGene: a previously-defined target genes of regulators.<br/>
-###icTAIR also requires five parameters:
+####icTAIR also requires five parameters:
 (1) iterativeMax: the maximum number of allowed iterations, default set to 10.<br/>
 (2) setMin: the minimum allowable length of a target gene list, default set to 20.<br/>
 (3) corCut: the minimum correlation threshold, either as a value (0-1), default set to 0.1.<br/>
